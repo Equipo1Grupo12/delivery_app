@@ -63,7 +63,7 @@ class LoginPage extends StatelessWidget {
                 height: 45.0,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'register');
+                    Navigator.pushNamed(context, 'shops');
                     //Navigator.push(
                     // context,
                     // new MaterialPageRoute(
@@ -84,7 +84,9 @@ class LoginPage extends StatelessWidget {
                     top: 10.0, left: 10.0
                 ),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'register');
+                  },
                   child: const Text('¿Crear cuenta?',
                     style: TextStyle(
                         color: Colors.lightGreen, fontWeight: FontWeight.bold, fontSize: 13.0

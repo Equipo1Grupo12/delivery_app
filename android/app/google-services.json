@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1086174237918",
+    "firebase_url": "https://deliveryappmintic-default-rtdb.firebaseio.com",
+    "project_id": "deliveryappmintic",
+    "storage_bucket": "deliveryappmintic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086174237918:android:d7da893ceed776e254de4f",
+        "android_client_info": {
+          "package_name": "com.deliveryProject.delivery_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086174237918-tm4p0rgg144s8a7727ffvogqmduji03e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxx1K_e-Fk0drkdBU_IeS1C5WJNMYfC6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086174237918-tm4p0rgg144s8a7727ffvogqmduji03e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

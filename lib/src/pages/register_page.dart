@@ -86,7 +86,7 @@ class RegisterPage extends StatelessWidget {
                   ),
                   ),
 
-                  child: const Text('Ingresar'),
+                  child: const Text('Finalizar'),
                 ),
 
               ),
