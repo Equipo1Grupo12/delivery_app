@@ -11,7 +11,7 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
       children: [
-        Container(
+        Container( // background
           decoration: const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
@@ -25,15 +25,12 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
         ),
-        Column(
+        Center( child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 //Texto 1
             Container(
-              margin: EdgeInsets.only(
-                top: 90.0,
-                left: 50.0
-              ),
+              margin: EdgeInsets.only(top: 90.0),
               child: const Text('COMUNIDAPP',style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 50.0
               ),
@@ -42,7 +39,7 @@ class WelcomePage extends StatelessWidget {
 //Texto 2
             Container(
               margin: EdgeInsets.only(
-                  left: 30.0
+
               ),
               child: const Text('El comercio de tu barrio, al alcance de tu mano',style: TextStyle(
                   color: Colors.white, fontWeight: FontWeight.w400, fontSize: 12.0
@@ -50,12 +47,8 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
 
-
-
             Container(
-              margin: EdgeInsets.only(
-                top: 60.0, left: 30.0
-              ),
+              margin: EdgeInsets.only(top: 60.0),
               width: 150.0,
               height: 45.0,
               child: ElevatedButton(
@@ -77,9 +70,7 @@ class WelcomePage extends StatelessWidget {
 
             ),
             Container(
-              margin: EdgeInsets.only(
-                  top: 10.0, left: 30.0
-              ),
+              margin: EdgeInsets.only(top: 10.0),
               child: TextButton(
                 onPressed: () {},
                 child: const Text('Crea tu cuenta aquí',
@@ -90,7 +81,7 @@ class WelcomePage extends StatelessWidget {
               ),
             )
           ],
-        )
+        ))
       ],
       ),
     );

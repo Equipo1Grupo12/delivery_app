@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
-import 'store_data.dart';
 import 'card_storage.dart';
 
 class SearchList extends StatelessWidget {
+
+  var searchList = [];
+
+  SearchList(this.searchList);
+
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
         padding: const EdgeInsets.all(10),
         itemBuilder: (BuildContext context, int index) {
-          var tempStore = storesData[index];
+          var tempStore = searchList[index];
           var storePathImg = tempStore['path'].toString();
           var storeName = tempStore['name'].toString();
           var storeAddress = tempStore['address'].toString();
@@ -17,7 +21,7 @@ class SearchList extends StatelessWidget {
               storePathImg, storeName, storeAddress, storeContact);
         },
         separatorBuilder: (BuildContext context, int index) => const Divider(),
-        itemCount: storesData.length
+        itemCount: searchList.length
     );
   }
 }
