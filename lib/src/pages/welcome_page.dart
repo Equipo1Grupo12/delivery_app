@@ -72,7 +72,9 @@ class WelcomePage extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(top: 10.0),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'register');
+                },
                 child: const Text('Crea tu cuenta aquí',
                       style: TextStyle(
                 color: Colors.lightGreen, fontWeight: FontWeight.bold, fontSize: 13.0

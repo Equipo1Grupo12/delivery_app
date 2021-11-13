@@ -4,7 +4,7 @@ import 'package:delivery_app/src/pages/shops_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
 
 
   @override
@@ -23,9 +23,9 @@ class LoginPage extends StatelessWidget {
               filter: ImageFilter.blur(sigmaX:1.0, sigmaY: 1.0),
               child: Container(
                 color: Colors.black.withOpacity(0.3),
-                ),
               ),
-              ),
+            ),
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -35,26 +35,37 @@ class LoginPage extends StatelessWidget {
                     top: 80.0,
                     left: 10.0
                 ),
-                child: const Text('INGRESA!',style: TextStyle(
-                   color: Colors.white, fontWeight: FontWeight.bold, fontSize: 50.0
+                child: const Text('Regístrate!',style: TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold, fontSize: 50.0
                 ),
                 ),
               ),
 
+              Container(
+                margin: EdgeInsets.only(
+                    left: 50.0
+                ),
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage('assets/img/food1.jpg'))
+                ),
+              ),
 //Texto 2
               Container(
                 margin: EdgeInsets.only(
                     left: 20.0
                 ),
-                child: const Text('Ingresa y apoya tu barrio',style: TextStyle(
+                child: const Text('Compra y apoya tu comunidad',style: TextStyle(
                     color: Colors.white, fontWeight: FontWeight.w400, fontSize: 12.0
                 ),
                 ),
               ),
-
+              idInput(),
+              nameInput(),
               emailInput(),
               passwordInput(),
-
+              phoneInput(),
               Container(
                 margin: EdgeInsets.only(
                     top: 100.0, left: 10.0
@@ -75,7 +86,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   ),
 
-                  child: const Text('Ingresar'),
+                  child: const Text('Finalizar'),
                 ),
 
               ),
@@ -84,9 +95,7 @@ class LoginPage extends StatelessWidget {
                     top: 10.0, left: 10.0
                 ),
                 child: TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, 'register');
-                  },
+                  onPressed: () {},
                   child: const Text('¿Crear cuenta?',
                     style: TextStyle(
                         color: Colors.lightGreen, fontWeight: FontWeight.bold, fontSize: 13.0
@@ -104,7 +113,7 @@ class LoginPage extends StatelessWidget {
 
 Widget emailInput(){
   return Container(
-    margin: EdgeInsets.only(top: 80.0),
+    margin: EdgeInsets.only(top: 10.0),
     padding: EdgeInsets.only(left: 10.0),
     decoration: BoxDecoration(
         color: Color.fromRGBO(142, 142, 147, 1.2),
@@ -133,7 +142,7 @@ Widget idInput(){
     child: TextField(
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
-          hintText: 'Email',
+          hintText: 'Cedula',
           border: OutlineInputBorder(
               borderSide: BorderSide.none
           )
@@ -145,7 +154,7 @@ Widget idInput(){
 
 Widget nameInput(){
   return Container(
-    margin: EdgeInsets.only(top: 80.0),
+    margin: EdgeInsets.only(top:10.0),
     padding: EdgeInsets.only(left: 10.0),
     decoration: BoxDecoration(
         color: Color.fromRGBO(142, 142, 147, 1.2),
@@ -154,7 +163,7 @@ Widget nameInput(){
     child: TextField(
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
-          hintText: 'Email',
+          hintText: 'Nombre',
           border: OutlineInputBorder(
               borderSide: BorderSide.none
           )
@@ -166,7 +175,7 @@ Widget nameInput(){
 
 Widget phoneInput(){
   return Container(
-    margin: EdgeInsets.only(top: 80.0),
+    margin: EdgeInsets.only(top: 10.0),
     padding: EdgeInsets.only(left: 10.0),
     decoration: BoxDecoration(
         color: Color.fromRGBO(142, 142, 147, 1.2),
@@ -175,7 +184,7 @@ Widget phoneInput(){
     child: TextField(
       keyboardType: TextInputType.phone,
       decoration: InputDecoration(
-          hintText: 'Email',
+          hintText: 'Telefono',
           border: OutlineInputBorder(
               borderSide: BorderSide.none
           )
@@ -187,7 +196,7 @@ Widget phoneInput(){
 
 Widget passwordInput(){
   return Container(
-    margin: EdgeInsets.only(top: 20.0),
+    margin: EdgeInsets.only(top:10.0),
     padding: EdgeInsets.only(left: 10.0),
     decoration: BoxDecoration(
         color: Color.fromRGBO(142, 142, 147, 1.2),
