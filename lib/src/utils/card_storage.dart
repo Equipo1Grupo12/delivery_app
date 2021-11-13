@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'floating_action_button_shop.dart';
+
 
 class CardStorage extends StatelessWidget {
 
@@ -7,8 +9,9 @@ class CardStorage extends StatelessWidget {
   String name;
   String address;
   String contact;
+  String index;
 
-  CardStorage(this.pathImage, this.name, this.address, this.contact);
+  CardStorage(this.index, this.pathImage, this.name, this.address, this.contact);
 
   @override
   Widget build(BuildContext context) {
@@ -74,21 +77,29 @@ class CardStorage extends StatelessWidget {
       ),
     );
 
-    return Container(
-      //color: Color(0x70A3A3A3),
-      child: Row (
-        children: <Widget>[
-          photo,
-          storeDetails
-        ],
-      ),
-
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        //color: Color(0x1734FF07),
-        border: Border.all(color: Colors.black),
-      ),
+    //print(index);
+    return Stack(
+      alignment: Alignment(0.8, 0),
+      children: <Widget>[
+        Container(
+          //color: Color(0x70A3A3A3),
+          child: Row (
+            children: <Widget>[
+            photo,
+            storeDetails,
+            ],
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            //color: Color(0x1734FF07),
+            border: Border.all(color: Colors.black),
+          ),
+        ),
+        FloatingActionButtonShop(index)
+      ],
     );
+
+
   }
 
 }

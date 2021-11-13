@@ -13,12 +13,12 @@ class SearchList extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         itemBuilder: (BuildContext context, int index) {
           var tempStore = searchList[index];
+          var storeid =  tempStore['id'].toString();
           var storePathImg = tempStore['path'].toString();
           var storeName = tempStore['name'].toString();
           var storeAddress = tempStore['address'].toString();
           var storeContact = tempStore['contact'].toString();
-          return CardStorage(
-              storePathImg, storeName, storeAddress, storeContact);
+          return CardStorage(storeid,storePathImg, storeName, storeAddress, storeContact);
         },
         separatorBuilder: (BuildContext context, int index) => const Divider(),
         itemCount: searchList.length

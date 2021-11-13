@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../utils/search_list.dart';
@@ -12,7 +13,6 @@ class ShopsPage extends StatefulWidget {
 
 class _ShopsPage extends State<ShopsPage> {
 
-  var storeSearchList = List.from(storesData);
   bool val1 = false;
   bool val2 = false;
   bool val3 = false;
@@ -21,7 +21,7 @@ class _ShopsPage extends State<ShopsPage> {
     storeSearchList = [];
     setState(() {
       storesData.forEach((shop) => {
-        val1 = (shop['name'].toString().toLowerCase().indexOf(context.toLowerCase()) >= 0),
+        val1 = (shop['name'].toString().toLowerCase().indexOf(context.toLowerCase())) >= 0,
         val2 = (shop['Btype'].toString().toLowerCase().indexOf(context.toLowerCase())) >= 0,
         val2 = (shop['categories'].toString().toLowerCase().indexOf(context.toLowerCase())) >= 0,
         if(val1 || val2 || val3){
