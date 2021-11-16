@@ -11,7 +11,7 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
       children: [
-        Container( // background
+        Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
@@ -25,12 +25,15 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
         ),
-        Center( child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
 //Texto 1
             Container(
-              margin: EdgeInsets.only(top: 90.0),
+              margin: EdgeInsets.only(
+                top: 90.0,
+                left: 50.0
+              ),
               child: const Text('COMUNIDAPP',style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 50.0
               ),
@@ -39,7 +42,7 @@ class WelcomePage extends StatelessWidget {
 //Texto 2
             Container(
               margin: EdgeInsets.only(
-
+                  left: 30.0
               ),
               child: const Text('El comercio de tu barrio, al alcance de tu mano',style: TextStyle(
                   color: Colors.white, fontWeight: FontWeight.w400, fontSize: 12.0
@@ -47,8 +50,12 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
 
+
+
             Container(
-              margin: EdgeInsets.only(top: 60.0),
+              margin: EdgeInsets.only(
+                top: 60.0, left: 30.0
+              ),
               width: 150.0,
               height: 45.0,
               child: ElevatedButton(
@@ -70,11 +77,11 @@ class WelcomePage extends StatelessWidget {
 
             ),
             Container(
-              margin: EdgeInsets.only(top: 10.0),
+              margin: EdgeInsets.only(
+                  top: 10.0, left: 30.0
+              ),
               child: TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, 'register');
-                },
+                onPressed: () {},
                 child: const Text('Crea tu cuenta aquí',
                       style: TextStyle(
                 color: Colors.lightGreen, fontWeight: FontWeight.bold, fontSize: 13.0
@@ -83,7 +90,7 @@ class WelcomePage extends StatelessWidget {
               ),
             )
           ],
-        ))
+        )
       ],
       ),
     );

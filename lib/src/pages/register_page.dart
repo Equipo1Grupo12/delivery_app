@@ -81,6 +81,7 @@ class RegisterPage extends StatelessWidget {
                     //   builder: (context) => new ShopsPage()));
                   },
 
+
                   style: ElevatedButton.styleFrom(primary: Colors.green ,shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(10.0)
                   ),
@@ -140,9 +141,11 @@ Widget idInput(){
         borderRadius:BorderRadius.circular(25.0)
     ),
     child: TextField(
+
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
           hintText: 'Cedula',
+
           border: OutlineInputBorder(
               borderSide: BorderSide.none
           )
