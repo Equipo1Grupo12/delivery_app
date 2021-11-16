@@ -26,7 +26,7 @@ class WelcomePage extends StatelessWidget {
           ),
         ),
         Center( child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
 //Texto 1
             Container(

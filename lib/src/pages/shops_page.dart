@@ -38,7 +38,10 @@ class _ShopsPage extends State<ShopsPage> {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-                //color: Color(0xFF1A9316)
+                image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage('assets/img/wallpaper_welcomepage.jpg')
+                )
             ),
             margin: EdgeInsets.only(top: 40.0),
             child: Column(
