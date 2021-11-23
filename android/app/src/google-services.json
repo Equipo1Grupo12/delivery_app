@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "815896515337",
+    "project_id": "deliveryappmintic-cbfeb",
+    "storage_bucket": "deliveryappmintic-cbfeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815896515337:android:f6ef2b3c6ab791ad8879d8",
+        "android_client_info": {
+          "package_name": "com.deliveryProject.delivery_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815896515337-hfm6bie6tmihjbofuorpdkk43mdfk47f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc64hcBDbz_wXE7_L1Ha8RZub-Zd5iuuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815896515337-hfm6bie6tmihjbofuorpdkk43mdfk47f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
