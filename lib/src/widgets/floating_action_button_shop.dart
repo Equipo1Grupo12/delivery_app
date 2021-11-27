@@ -11,25 +11,26 @@ class FloatingActionButtonShop extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return _FloatingActionButtonShop(_index);
+    return _FloatingActionButtonShop();
   }
 }
 
 class _FloatingActionButtonShop extends State<FloatingActionButtonShop> {
-  var _index;
+  //var _index;
 
-  _FloatingActionButtonShop(this._index);
+  //_FloatingActionButtonShop(this._index);
 
   void onPressed(){
-    if (_index == null) {
-      this._index = 0;
+    if (widget._index == null) {
+      widget._index = 0;
     } else {
-      this._index = _index;
+      widget._index = widget._index;
     }
+    print(widget._index);
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => ShopDetailPage(_index)
+          builder: (context) => ShopDetailPage(widget._index)
         )
     );
   }

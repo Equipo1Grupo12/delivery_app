@@ -1,17 +1,17 @@
 import 'dart:ui';
+import 'package:delivery_app/src/widgets/search_list.dart';
+import 'package:delivery_app/src/store_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../utils/search_list.dart';
-import '../utils/store_data.dart';
 
-class ShopsPage extends StatefulWidget {
+class ShopsListPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _ShopsPage();
+    return _ShopsListPage();
   }
 }
 
-class _ShopsPage extends State<ShopsPage> {
+class _ShopsListPage extends State<ShopsListPage> {
 
   bool val1 = false;
   bool val2 = false;
@@ -43,7 +43,7 @@ class _ShopsPage extends State<ShopsPage> {
                 image: AssetImage('assets/img/wallpaper_welcomepage.jpg')
                 )
             ),
-            margin: EdgeInsets.only(top: 40.0),
+            padding: EdgeInsets.only(top: 40.0),
             child: Column(
               children: [
                 Text(
@@ -76,10 +76,9 @@ class _ShopsPage extends State<ShopsPage> {
               ],
             ),
           ),
-
           Container(
             margin: EdgeInsets.only(top: 50.0),
-            padding: EdgeInsets.only(top: 100.0),
+            padding: EdgeInsets.only(top: 100.0,bottom: 50.0),
             child: SearchList(storeSearchList),
           )
         ]

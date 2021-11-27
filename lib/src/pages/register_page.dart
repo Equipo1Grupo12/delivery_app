@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:delivery_app/src/routes/routes.dart';
-import 'package:delivery_app/src/pages/shops_page.dart';
+import 'package:delivery_app/src/pages/shops_list_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

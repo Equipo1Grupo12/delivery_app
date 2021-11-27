@@ -1,4 +1,4 @@
-import 'package:delivery_app/src/utils/store_data.dart';
+import 'package:delivery_app/src/store_data.dart';
 import 'package:flutter/material.dart';
 
 class ShopDetailPage extends StatelessWidget {
@@ -8,7 +8,7 @@ class ShopDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var temp = storeSearchList[int.parse(index)];
+    var temp = storesData[int.parse(index)];
     return Container(
       color: Colors.green,
       child: Text('$index'+'$temp')

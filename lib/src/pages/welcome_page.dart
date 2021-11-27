@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:delivery_app/src/routes/routes.dart';
-import 'package:delivery_app/src/pages/shops_page.dart';
+import 'package:delivery_app/src/pages/shops_list_page.dart';
 import 'package:delivery_app/src/pages/login_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -50,8 +50,6 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
 
-
-
             Container(
               margin: EdgeInsets.only(
                 top: 60.0, left: 30.0
@@ -66,7 +64,6 @@ class WelcomePage extends StatelessWidget {
                      // new MaterialPageRoute(
                        //   builder: (context) => new ShopsPage()));
                 },
-
                 style: ElevatedButton.styleFrom(primary: Colors.green ,shape: new RoundedRectangleBorder(
                 borderRadius: new BorderRadius.circular(10.0)
                 ),
