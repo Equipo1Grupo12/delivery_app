@@ -1,7 +1,8 @@
 import 'dart:ui';
 
-import 'package:delivery_app/src/bloc/user_bloc.dart';
-import 'package:delivery_app/src/pages/button_google.dart';
+import 'package:delivery_app/src/bloc/bloc_logic.dart';
+import 'package:delivery_app/src/model/user_model.dart';
+import 'package:delivery_app/src/widgets/button_google.dart';
 import 'package:delivery_app/src/pages/shops_list_page.dart';
 import 'package:delivery_app/src/pages/tab_bar_page.dart';
 import 'package:flutter/material.dart';
@@ -14,18 +15,19 @@ class SignInScreen extends StatefulWidget {
 
 class _SignInScreenState extends State<SignInScreen> {
 
-  late UserBloc userBloc;
+  late BlocLogic blocLogic;
 
   @override
   Widget build(BuildContext context) {
-    userBloc = BlocProvider.of(context);
+    blocLogic = BlocProvider.of(context);
     return _consultarSesionActual();
   }
 
   Widget _consultarSesionActual(){
     return StreamBuilder(
-      stream: userBloc.authStatus,
+      stream: blocLogic.authStatus,
       builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot){
+        blocLogic.getShopsData();
         if(!snapshot.hasData || snapshot.hasError){
           return signInGoogleUI();
         } else {
@@ -87,16 +89,16 @@ class _SignInScreenState extends State<SignInScreen> {
                 child: ButtonGoogle(
                   text: 'Login with Gmail',
                   onPressed: () {
-                    userBloc.signOut();
-                    userBloc.signIn()
+                    blocLogic.signOut();
+                    blocLogic.signIn()
                         .then((user) { // Objeto user de Google al hacer sighIn
                       //print(user.user!.displayName);
                       print('Logueado ${user.user!.displayName}');
-                      /*userBloc.updateUserData(UserModel(
+                      blocLogic.updateUserData(UserModel(
                           uid: user.user!.uid,
-                          name: user.user!.displayName.toString(),
                           email: user.user!.email.toString(),
-                      ));*/
+                          name: user.user!.displayName.toString(),
+                          ));
                     });
                   },
                   width: 300.0,

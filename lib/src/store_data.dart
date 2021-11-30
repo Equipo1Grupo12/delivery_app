@@ -11,4 +11,8 @@ final storesData = [
   {'id': '7','name': 'B', 'path': 'assets/img/logo1.png', 'address': 'Calle B3 35', 'contact':'123456', 'Btype':'Ferreteria','categories':''},
 ];
 
+var firestoreDataShops = [];
+
 var storeSearchList = List.from(storesData);
+
+
