@@ -8,7 +8,7 @@ class ShopDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var temp = storesData[int.parse(index)];
+    var temp = firestoreDataShops[int.parse(index)];
     return Container(
       color: Colors.green,
       child: Text('$index'+'$temp')

@@ -1,9 +1,9 @@
 class UserModel {
-  final String uid;
-  final String name;
+  String uid;
+  String name;
   String id;
   String address;
-  final String email;
+  String email;
 
   UserModel({
     required this.uid,

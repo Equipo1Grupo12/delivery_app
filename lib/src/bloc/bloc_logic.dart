@@ -24,8 +24,15 @@ class BlocLogic implements Bloc {
   final _cloudFirestoreRepository = CloudFirestoreRepository();
   void updateUserData(UserModel user) => _cloudFirestoreRepository.updateUserDataFirestore(user);
 
+  // Get User
+  void  getUserData() => _cloudFirestoreRepository.getUserDataFirestore();
+
+  // Actualizar direccion
+  Future<void> updateAddress(String address) => _cloudFirestoreRepository.updateAddressFirestore(address);
+
   // Traer informacion del las tiendas de la base de datos
   void getShopsData() => _cloudFirestoreRepository.getShopsDataFirestore();
+
 
   @override
   void dispose() {

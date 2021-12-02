@@ -6,7 +6,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
+import '../store_data.dart';
+
 class TabBarPage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +47,7 @@ class TabBarPage extends StatelessWidget {
               );
               break;
             default:
-              return CupertinoTabView();
+              return CupertinoTabView();//CupertinoTabView
           }
         },
       ),

@@ -3,10 +3,11 @@ import 'dart:ui';
 import 'package:delivery_app/src/bloc/bloc_logic.dart';
 import 'package:delivery_app/src/model/user_model.dart';
 import 'package:delivery_app/src/widgets/button_google.dart';
-import 'package:delivery_app/src/pages/shops_list_page.dart';
 import 'package:delivery_app/src/pages/tab_bar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+
+import '../store_data.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -28,10 +29,12 @@ class _SignInScreenState extends State<SignInScreen> {
       stream: blocLogic.authStatus,
       builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot){
         blocLogic.getShopsData();
-        if(!snapshot.hasData || snapshot.hasError){
+        if(!snapshot.hasData || snapshot.hasError) {
           return signInGoogleUI();
         } else {
-          return TabBarPage();
+          checkAddress = false;
+          blocLogic.getUserData();
+          return TabBarPage();//TabBarPage()AddressConfirmation
         }
       }
     );
@@ -92,13 +95,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     blocLogic.signOut();
                     blocLogic.signIn()
                         .then((user) { // Objeto user de Google al hacer sighIn
-                      //print(user.user!.displayName);
+                      //print(user.user!.displayName); // user de google
                       print('Logueado ${user.user!.displayName}');
                       blocLogic.updateUserData(UserModel(
-                          uid: user.user!.uid,
-                          email: user.user!.email.toString(),
-                          name: user.user!.displayName.toString(),
-                          ));
+                        uid: user.user!.uid,
+                        email: user.user!.email.toString(),
+                        name: user.user!.displayName.toString(),
+                      ));
+                      //print(currentUser);
                     });
                   },
                   width: 300.0,
